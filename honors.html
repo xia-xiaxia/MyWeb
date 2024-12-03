@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheShy - 荣誉与成就</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TheShy 的荣誉与成就</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="career.html">选手经历</a></li>
+                <li><a href="honors.html">荣誉与成就</a></li>
+                <li><a href="photos.html">来点帅照</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="honors">
+        <h2>主要荣誉</h2>
+        <ul>
+            <li>2018年：英雄联盟全球总决赛冠军</li>
+            <li>2018年：LPL 夏季赛冠军</li>
+            <li>2019年：LPL 春季赛冠军</li>
+            <li>2020年：英雄联盟全球总决赛四强</li>
+            <li>2021年：LPL 春季赛冠军</li>
+        </ul>
+
+        <h3>荣誉图片</h3>
+        <img class="centered-image" src="eeeeePicture/honor().jpg" alt="总结">
+        <div class="honor-images">
+            <!-- 上传图片的占位符，你可以替换成实际的图片路径 -->
+            <img src="eeeeePicture/IG夺冠.jpg" alt="Honor 1">
+            <img src="eeeeePicture/641.jpg" alt="Honor 2">
+            <img src="eeeeePicture/www.jpg" alt="Honor 3">
+        </div>
+
+        <h3>上传荣誉图片</h3>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file">选择图片文件:</label>
+            <input type="file" id="file" name="file" accept="image/*" onchange="previewImage(event)">
+            <input type="submit" value="上传">
+        </form>
+        <img id="preview" class="uploaded-image" alt="预览">
+    </section>
+
+    <footer>
+        <p>© 2024 TheShy Official</p>
+    </footer>
+
+    <script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('preview');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+    </script>
+</body>
+</html>

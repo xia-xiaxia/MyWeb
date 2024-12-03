@@ -1,0 +1,151 @@
+/* 统一网站样式 */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header, section, footer {
+    width: 100%;
+    max-width: 800px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #007BFF;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    color: #333;
+}
+
+ul {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.honor-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.honor-images img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.uploaded-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.centered-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.career-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.intro-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.intro-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.intro-image {
+    flex: 0 0 auto;
+}
+
+.intro-image img {
+    max-width: 200px;
+    height: auto;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photo {
+    flex: 0 0 48%;
+    margin-bottom: 20px;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.preview {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.preview img {
+    max-width: 90vw;
+    max-height: 90vh;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheShy - 照片集</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TheShy 的照片集</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="career.html">选手经历</a></li>
+                <li><a href="honors.html">荣誉与成就</a></li>
+                <li><a href="photos.html">来点帅照</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="photo-gallery">
+        <div class="photo">
+            <img src="eeeeePicture/全明星.jpg" alt="全明星1">
+        </div>
+        <div class="photo">
+            <img src="eeeeePicture/quanmx.jpg" alt="Photo 2">
+        </div>
+        <div class="photo">
+            <img src="eeeeePicture/quanmx2.jpg" alt="Photo 3">
+        </div>
+        <div class="photo">
+            <img src="eeeeePicture/qmx3.jpg" alt="Photo 4">
+        </div>
+        <div class="photo">
+            <img src="eeeeePicture/zshy.jpg" alt="Photo 5">
+        </div>
+        <div class="photo">
+            <img src="eeeeePicture/zshy2.jpg" alt="Photo 6">
+        </div>
+        <div class="photo">
+            <img src="eeeeePicture/zshy5.jpg" alt="Photo 7">
+        </div>
+        <div class="photo">
+            <img src="eeeeePicture/www.jpg" alt="Photo 8">
+        </div>
+        <div class="photo">
+            <img src="eeeeePicture/zshy6.jpg" alt="Photo 9">
+        </div>
+        <div class="photo">
+            <img src="eeeeePicture/sha.jpg" alt="Photo 10">
+        </div>
+    </section>
+
+    <div id="preview" class="preview">
+        <img id="preview-img" src="" alt="预览">
+    </div>
+
+    <footer>
+        <p>© 2024 TheShy Official</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.photo img').forEach(img => {
+            img.addEventListener('mouseover', function() {
+                const preview = document.getElementById('preview');
+                const previewImg = document.getElementById('preview-img');
+                previewImg.src = this.src;
+                preview.style.display = 'block';
+            });
+            img.addEventListener('mouseout', function() {
+                const preview = document.getElementById('preview');
+                preview.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
